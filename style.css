@@ -1,0 +1,131 @@
+:root{
+    --primary-colour: #72C3DC;
+    --secondary-colour: #2B8EAD;
+    --black: #000;
+    --dark-gray: #333;
+    --white: #FFF;
+    --light-gray: #EFEFEF;
+    --gray:  #BFBFBF;
+}
+[data-colour="1"] {
+    --secondary-colour: #6F98A8;
+}
+[data-colour="2"] {
+    --secondary-colour: #2F454E;
+}
+[data-colour="3"] {
+    --secondary-colour: var(--gray);
+}
+
+body{
+    background-color: var(--white);
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: var(--white);
+    background-color: var(--dark-gray);
+    margin: 0;
+    padding: .5rem;;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+button{
+    background-color: var(--primary-colour);
+    color: var(--white);
+    border-radius: 6px;
+    border: none;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    width: 5.5rem;
+    box-shadow: 0 .3rem var(--secondary-colour);
+}
+button:hover{
+    background-color: var(--secondary-colour);
+    box-shadow: none;
+    transform: translateY(.3rem);
+}
+button:active{
+    outline: none;
+    border: none;
+}  
+button:focus{
+    outline:0;
+}
+
+.btn-container{
+    padding: .5rem 0;
+}
+
+.card-container{
+    padding: .8rem;
+}
+
+.card{
+    padding: .8rem;
+    margin-bottom: .3rem;
+    background-color: var(--light-gray);
+    border-left: .5rem solid var(--secondary-colour);
+}
+
+.signature{
+    font-size: .8rem;
+    font-style: italic;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 960px) {
+    h1{
+        color: var(--black);
+        background-color: var(--white);
+    }
+
+    button{
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+
+    .btn-container{
+        padding: 2rem;
+        width: 25%;
+    }
+
+    .content{
+        background-color: var(--light-gray);
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        border-top: .4rem solid var(--gray);
+    }
+
+    .col-lg-4 {
+        width: 33.33%;
+    }
+
+    .card-container{
+        padding: initial;
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+    }
+
+    .card{
+        padding: 20%;
+        margin-bottom: initial;
+        background-color: var(--secondary-colour);
+        border: none;
+        color: var(--white);
+        font-size: 6rem;
+    }
+
+    .signature{
+        padding-bottom: 4rem;
+    }
+
+  }
